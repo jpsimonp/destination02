@@ -4,7 +4,7 @@ package com.example.rest.data;
  * 
  * @author jpsimon
  * 
- * PRODUCT
+ * PROJECT
  * 
  * Common data class is shared in project and product and it is the same in both
  *
@@ -17,13 +17,13 @@ public class CommonMatchData {
 		this.evolution1 = e;
 	}
 
-	public long getEvolution1() {
+
+	public String getEvolution1() {
 		return evolution1;
 	}
 
-	public void setEvolution1(long evolution1) {
+	public void setEvolution1(String evolution1) {
 		this.evolution1 = evolution1;
 	}
-	
 
 }

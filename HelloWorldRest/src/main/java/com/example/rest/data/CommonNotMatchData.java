@@ -4,9 +4,9 @@ package com.example.rest.data;
  * 
  * @author jpsimon
  * 
- * PRODUCT
+ * PROJECT
  * 
- * Greeting data class is shared in project and product but one less field remarks on product
+ * Greeting data class is shared in project and product but new field remarks was added on project
  *
  */
 public class CommonNotMatchData {
@@ -15,7 +15,7 @@ public class CommonNotMatchData {
     private final String content;
     private final String remarks;
 
-    public CommonNotMatchData(long id, String content) {
+    public CommonNotMatchData(long id, String content, String remarks) {
         this.id = id;
         this.content = content;
         this.remarks = remarks;

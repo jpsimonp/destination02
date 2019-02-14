@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 
  * @author jpsimon
  * 
- * PRODUCT
+ * PROJECT
  * 
  * General controller class is shared in project and product and it is the same in both
  *
