@@ -25,4 +25,10 @@ public class GeneralController {
 	public String projectEvolution1() {
 		return "General evolution1 project";
 	}
+	
+	@GetMapping(value = "/general/evolution2/product", produces = "application/json")
+	@ResponseBody
+	public String productEvolution2() {
+		return "General evolution2 product";
+	}
 }
