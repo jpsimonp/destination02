@@ -12,7 +12,7 @@ import com.example.rest.data.Greeting;
  * 
  * @author jpsimon
  * 
- * Greeting controller class is shared in project and product but one less method greetingRemarks on product
+ * Greeting controller class is shared in project and product but new method greetingRemarks was added on project
  *
  */
 @RestController
@@ -24,11 +24,18 @@ public class GreetingController {
     @GetMapping(value = "/greeting", produces = "application/json")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return new Greeting(counter.incrementAndGet(),
-                            String.format(template, name));
+                            String.format(template, name), null);
     }
     
-    @GetMapping(value = "/greeting/evolution1", produces = "application/json")
-    public String evolution1() {
-        return "Greeting evolution1";
+    @GetMapping(value = "/greeting/remarks", produces = "application/json")
+    public Greeting greetingRemarks(@RequestParam(value="name", defaultValue="World") String name, @RequestParam(value="remarks") String remarks) {
+        return new Greeting(counter.incrementAndGet(),
+                            String.format(template, name), remarks);
+    }
+    
+    @GetMapping(value = "/greeting/evolution1/project", produces = "application/json")
+    public Greeting greetingEvoluction1(@RequestParam(value="name", defaultValue="World") String name, @RequestParam(value="evolution1", defaultValue="evolution1") String evolution1) {
+        return new Greeting(counter.incrementAndGet(),
+                            String.format(template, name), evolution1);
     }
 }
